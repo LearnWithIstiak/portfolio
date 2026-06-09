@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shovon Mitra – Deputy Director (Technical), Bangladesh Rural Electrification Board. Civil Engineer, Infrastructure Leader, Project Management Specialist.">
+<meta property="og:title" content="Shovon Mitra | Civil Engineer & Infrastructure Leader">
+<meta property="og:description" content="Portfolio of Shovon Mitra – Civil Engineer and Government Engineering Executive with expertise in infrastructure development and rural electrification.">
+<meta property="og:type" content="website">
+<title>Shovon Mitra | Civil Engineer & Infrastructure Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --royal: #0F172A;
+    --electric: #2563EB;
+    --gold: #D4AF37;
+    --bg: #F8FAFC;
+    --text: #0F172A;
+    --muted: #64748B;
+    --surface: #FFFFFF;
+    --border: rgba(15,23,42,0.1);
+    --card-bg: #FFFFFF;
+    --hero-overlay: rgba(15,23,42,0.55);
+  }
+  [data-theme="dark"] {
+    --bg: #020617;
+    --text: #F8FAFC;
+    --muted: #94A3B8;
+    --surface: #0F172A;
+    --border: rgba(248,250,252,0.1);
+    --card-bg: #0F172A;
+    --hero-overlay: rgba(2,6,23,0.7);
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+    overflow-x: hidden;
+  }
+
+  /* SCROLL PROGRESS */
+  #scroll-bar {
+    position: fixed; top: 0; left: 0; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--electric));
+    width: 0%; z-index: 9999; transition: width 0.1s;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 3px; left: 0; right: 0; z-index: 1000;
+    background: rgba(15,23,42,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212,175,55,0.2);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; color: #F8FAFC; font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: #94A3B8; text-decoration: none; font-size: 0.875rem;
+    font-weight: 500; letter-spacing: 0.03em; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-right { display: flex; align-items: center; gap: 1rem; }
+
+  /* THEME TOGGLE */
+  .theme-toggle {
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px; padding: 4px; cursor: pointer;
+    display: flex; align-items: center; gap: 4px; transition: all 0.3s;
+  }
+  .theme-toggle:hover { background: rgba(255,255,255,0.15); }
+  .toggle-icon { font-size: 0.85rem; padding: 2px 6px; border-radius: 12px; transition: all 0.3s; }
+  .toggle-icon.active { background: var(--gold); }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh; display: flex; align-items: center;
+    position: relative; overflow: hidden;
+    background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 50%, #0F172A 100%);
+  }
+  #particles-canvas {
+    position: absolute; inset: 0; pointer-events: none;
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto; padding: 6rem 2rem 4rem;
+    display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center;
+  }
+  .hero-photo-wrap {
+    display: flex; justify-content: center;
+  }
+  .hero-photo {
+    width: 340px; height: 420px; border-radius: 8px;
+    background: linear-gradient(160deg, #1E3A5F, #0F172A);
+    border: 2px solid rgba(212,175,55,0.4);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+  }
+  .hero-photo-placeholder {
+    display: flex; flex-direction: column; align-items: center; gap: 1rem;
+    color: rgba(212,175,55,0.6);
+  }
+  .hero-photo-placeholder svg { width: 80px; height: 80px; opacity: 0.5; }
+  .hero-photo-placeholder p { font-size: 0.8rem; color: rgba(212,175,55,0.5); text-align: center; }
+  .hero-photo::before {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%;
+    background: linear-gradient(to top, rgba(15,23,42,0.8), transparent);
+  }
+  .hero-content { color: #F8FAFC; }
+  .hero-eyebrow {
+    display: inline-block; font-size: 0.75rem; font-weight: 600;
+    letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase;
+    margin-bottom: 1rem; padding: 6px 16px;
+    border: 1px solid rgba(212,175,55,0.3); border-radius: 2px;
+  }
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700;
+    line-height: 1.1; margin-bottom: 1rem;
+    color: #F8FAFC;
+  }
+  .hero-name em { color: var(--gold); font-style: normal; }
+  .hero-title {
+    font-size: 1rem; color: #94A3B8; line-height: 1.6; margin-bottom: 1.5rem;
+    font-weight: 400; border-left: 2px solid var(--gold); padding-left: 1rem;
+  }
+  .hero-bio { font-size: 0.95rem; color: #CBD5E1; line-height: 1.8; margin-bottom: 2rem; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  .btn-primary {
+    background: var(--electric); color: #fff;
+    padding: 12px 28px; border-radius: 4px; border: none;
+    font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 600;
+    letter-spacing: 0.05em; cursor: pointer; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: all 0.25s; text-transform: uppercase;
+  }
+  .btn-primary:hover { background: #1D4ED8; transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; color: #F8FAFC;
+    padding: 12px 28px; border-radius: 4px; border: 1px solid rgba(248,250,252,0.3);
+    font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 600;
+    letter-spacing: 0.05em; cursor: pointer; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: all 0.25s; text-transform: uppercase;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+  .hero-socials { display: flex; gap: 1rem; }
+  .social-link {
+    width: 40px; height: 40px; border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    color: #94A3B8; text-decoration: none; font-size: 1rem;
+    transition: all 0.25s;
+  }
+  .social-link:hover { border-color: var(--gold); color: var(--gold); background: rgba(212,175,55,0.1); }
+  .hero-gold-line {
+    width: 60px; height: 2px; background: var(--gold); margin: 1.5rem 0;
+  }
+
+  /* SECTION COMMON */
+  section { padding: 6rem 2rem; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700; color: var(--text); line-height: 1.2; margin-bottom: 1rem;
+  }
+  .section-divider {
+    width: 48px; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--electric));
+    margin-bottom: 3rem; border-radius: 2px;
+  }
+
+  /* ABOUT */
+  #about { background: var(--bg); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .about-philosophy {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-left: 3px solid var(--gold); padding: 2rem;
+    border-radius: 4px; margin-top: 2rem;
+  }
+  .about-philosophy p {
+    font-family: 'Playfair Display', serif; font-style: italic;
+    font-size: 1.1rem; color: var(--text); line-height: 1.8;
+  }
+  .about-bio { font-size: 0.95rem; color: var(--muted); line-height: 1.9; margin-bottom: 1.5rem; }
+  .about-edu {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 4px; padding: 1.5rem; margin-top: 1rem;
+    display: flex; gap: 1rem; align-items: flex-start;
+  }
+  .edu-icon {
+    width: 44px; height: 44px; border-radius: 4px;
+    background: rgba(37,99,235,0.1); display: flex; align-items: center;
+    justify-content: center; color: var(--electric); font-size: 1.2rem; flex-shrink: 0;
+  }
+  .edu-detail h4 { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .edu-detail p { font-size: 0.85rem; color: var(--muted); }
+  .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+  .stat-item {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 4px;
+    padding: 1.25rem; text-align: center;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700;
+    color: var(--electric); display: block;
+  }
+  .stat-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+  /* EXPERIENCE */
+  #experience { background: var(--surface); }
+  .timeline { position: relative; padding-left: 2rem; }
+  .timeline::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 1px; background: linear-gradient(to bottom, var(--gold), var(--electric), transparent);
+  }
+  .timeline-item {
+    position: relative; padding-left: 2rem; margin-bottom: 3rem;
+    opacity: 0; transform: translateY(20px); transition: all 0.5s ease;
+  }
+  .timeline-item.visible { opacity: 1; transform: translateY(0); }
+  .timeline-dot {
+    position: absolute; left: -2rem; top: 4px;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--gold); border: 2px solid var(--bg); margin-left: -5px;
+    box-shadow: 0 0 0 3px rgba(212,175,55,0.2);
+  }
+  .timeline-date {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em;
+    color: var(--gold); text-transform: uppercase; margin-bottom: 0.5rem;
+  }
+  .timeline-role {
+    font-family: 'Playfair Display', serif; font-size: 1.25rem;
+    font-weight: 700; color: var(--text); margin-bottom: 0.25rem;
+  }
+  .timeline-org { font-size: 0.875rem; color: var(--electric); font-weight: 500; margin-bottom: 0.75rem; }
+  .timeline-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.8; }
+  .timeline-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.75rem; }
+  .tag {
+    font-size: 0.7rem; padding: 3px 10px; border-radius: 2px;
+    background: rgba(37,99,235,0.08); color: var(--electric);
+    border: 1px solid rgba(37,99,235,0.15); font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  /* EXPERTISE */
+  #expertise { background: var(--bg); }
+  .expertise-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; }
+  .expertise-card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 4px;
+    padding: 1.75rem 1.5rem; transition: all 0.3s;
+    cursor: default; position: relative; overflow: hidden;
+    opacity: 0; transform: translateY(16px); transition: opacity 0.5s, transform 0.5s, box-shadow 0.3s, border-color 0.3s;
+  }
+  .expertise-card.visible { opacity: 1; transform: translateY(0); }
+  .expertise-card::before {
+    content: ''; position: absolute; inset: 0;
+    border-radius: 4px; border: 1px solid var(--gold);
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .expertise-card:hover::before { opacity: 1; }
+  .expertise-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(37,99,235,0.1); }
+  .expertise-icon {
+    width: 48px; height: 48px; border-radius: 4px;
+    background: rgba(37,99,235,0.08); display: flex; align-items: center;
+    justify-content: center; font-size: 1.4rem; margin-bottom: 1rem; color: var(--electric);
+  }
+  .expertise-title { font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
+  .expertise-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+  /* SKILLS */
+  #skills { background: var(--surface); }
+  .skills-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .skill-group-title { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
+  .skill-item { margin-bottom: 1.25rem; }
+  .skill-top { display: flex; justify-content: space-between; margin-bottom: 6px; }
+  .skill-name { font-size: 0.875rem; font-weight: 500; color: var(--text); }
+  .skill-pct { font-size: 0.8rem; color: var(--muted); }
+  .skill-bar-bg {
+    height: 4px; background: var(--border); border-radius: 2px; overflow: hidden;
+  }
+  .skill-bar {
+    height: 100%; border-radius: 2px; width: 0;
+    background: linear-gradient(90deg, var(--electric), var(--gold));
+    transition: width 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  /* PROJECTS */
+  #projects { background: var(--bg); }
+  .filter-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+  .filter-btn {
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em;
+    padding: 6px 16px; border-radius: 2px;
+    border: 1px solid var(--border); cursor: pointer;
+    background: transparent; color: var(--muted); text-transform: uppercase;
+    transition: all 0.2s; font-family: 'Inter', sans-serif;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--electric); color: #fff; border-color: var(--electric);
+  }
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
+  .project-card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 4px;
+    overflow: hidden; transition: all 0.3s;
+    opacity: 0; transform: translateY(16px); transition: opacity 0.5s, transform 0.5s, box-shadow 0.3s;
+  }
+  .project-card.visible { opacity: 1; transform: translateY(0); }
+  .project-card:hover { box-shadow: 0 20px 48px rgba(0,0,0,0.12); transform: translateY(-4px); }
+  .project-img {
+    height: 180px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem; position: relative; overflow: hidden;
+  }
+  .project-body { padding: 1.5rem; }
+  .project-cat {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem;
+  }
+  .project-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+  .project-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
+  .project-outcome {
+    font-size: 0.8rem; color: var(--electric); font-weight: 500;
+    padding-top: 0.75rem; border-top: 1px solid var(--border);
+  }
+
+  /* CERTIFICATIONS */
+  #certifications { background: var(--surface); }
+  .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+  .cert-card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 4px; padding: 1.5rem;
+    display: flex; gap: 1rem; align-items: flex-start;
+    opacity: 0; transform: translateY(16px); transition: opacity 0.5s, transform 0.5s;
+  }
+  .cert-card.visible { opacity: 1; transform: translateY(0); }
+  .cert-icon {
+    width: 44px; height: 44px; border-radius: 4px; flex-shrink: 0;
+    background: rgba(212,175,55,0.1); display: flex; align-items: center;
+    justify-content: center; font-size: 1.2rem; color: var(--gold);
+  }
+  .cert-name { font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .cert-org { font-size: 0.8rem; color: var(--electric); margin-bottom: 4px; }
+  .cert-date { font-size: 0.75rem; color: var(--muted); }
+
+  /* STATS */
+  #stats {
+    background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 100%);
+    padding: 5rem 2rem; position: relative; overflow: hidden;
+  }
+  #stats::before {
+    content: ''; position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; position: relative; }
+  .stat-block { text-align: center; }
+  .counter-num {
+    font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700;
+    color: var(--gold); display: block; line-height: 1;
+  }
+  .counter-suffix { color: var(--gold); }
+  .stat-block p { font-size: 0.8rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.12em; margin-top: 0.5rem; }
+
+  /* CONTACT */
+  #contact { background: var(--bg); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start; }
+  .contact-info-card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 4px; padding: 2.5rem;
+  }
+  .contact-item { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+  .contact-icon {
+    width: 44px; height: 44px; flex-shrink: 0; border-radius: 4px;
+    background: rgba(37,99,235,0.08); display: flex; align-items: center;
+    justify-content: center; font-size: 1.1rem; color: var(--electric);
+  }
+  .contact-detail h4 { font-size: 0.8rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+  .contact-detail a, .contact-detail p { font-size: 0.9rem; color: var(--text); text-decoration: none; }
+  .contact-detail a:hover { color: var(--electric); }
+  .form-group { margin-bottom: 1.25rem; }
+  .form-label { display: block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .form-control {
+    width: 100%; padding: 12px 16px; border-radius: 4px;
+    border: 1px solid var(--border); background: var(--card-bg);
+    color: var(--text); font-family: 'Inter', sans-serif; font-size: 0.9rem;
+    transition: border-color 0.2s;
+  }
+  .form-control:focus { outline: none; border-color: var(--electric); }
+  .form-control::placeholder { color: var(--muted); }
+  textarea.form-control { resize: vertical; min-height: 120px; }
+  .form-btn {
+    width: 100%; padding: 14px; background: var(--electric); color: #fff;
+    border: none; border-radius: 4px; font-family: 'Inter', sans-serif;
+    font-size: 0.875rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; cursor: pointer; transition: all 0.25s;
+  }
+  .form-btn:hover { background: #1D4ED8; transform: translateY(-1px); }
+
+  /* FOOTER */
+  footer {
+    background: #0F172A; color: #94A3B8; text-align: center;
+    padding: 2rem; font-size: 0.8rem;
+  }
+  footer span { color: var(--gold); }
+
+  /* FLOATING CONTACT */
+  .fab-wrap { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; }
+  .fab-main {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--electric); border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 1.3rem; box-shadow: 0 4px 20px rgba(37,99,235,0.4);
+    transition: all 0.3s;
+  }
+  .fab-main:hover { background: #1D4ED8; transform: scale(1.08); }
+  .fab-options {
+    position: absolute; bottom: 60px; right: 0;
+    display: flex; flex-direction: column; gap: 10px;
+    opacity: 0; pointer-events: none; transform: translateY(10px);
+    transition: all 0.25s;
+  }
+  .fab-wrap.open .fab-options { opacity: 1; pointer-events: all; transform: translateY(0); }
+  .fab-opt {
+    display: flex; align-items: center; gap: 10px; justify-content: flex-end;
+    text-decoration: none;
+  }
+  .fab-opt-label {
+    background: var(--royal); color: #fff; font-size: 0.75rem;
+    padding: 4px 10px; border-radius: 3px; white-space: nowrap;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .fab-opt-icon {
+    width: 40px; height: 40px; border-radius: 50%; display: flex;
+    align-items: center; justify-content: center; color: #fff; font-size: 1rem;
+  }
+
+  /* ANIMATIONS */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero-inner, .about-grid, .skills-cols, .contact-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    nav .nav-links { display: none; }
+    .hero-photo { width: 260px; height: 320px; }
+  }
+  @media (max-width: 600px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .projects-grid, .certs-grid { grid-template-columns: 1fr; }
+    .stat-row { grid-template-columns: 1fr 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div id="scroll-bar"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Shovon <span>Mitra</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+      <span class="toggle-icon active" id="sun-icon">☀️</span>
+      <span class="toggle-icon" id="moon-icon">🌙</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="particles-canvas"></canvas>
+  <div class="hero-inner">
+    <div class="hero-photo-wrap">
+      <div class="hero-photo">
+        <div class="hero-photo-placeholder">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="28" r="18" fill="currentColor" opacity="0.3"/>
+            <path d="M10 72c0-16.569 13.431-30 30-30s30 13.431 30 30" fill="currentColor" opacity="0.2"/>
+          </svg>
+          <p>Replace with your professional photograph</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Civil Engineer &amp; Infrastructure Leader</div>
+      <h1 class="hero-name">Shovon<br><em>Mitra</em></h1>
+      <div class="hero-gold-line"></div>
+      <p class="hero-title">Deputy Director (Technical) · Bangladesh Rural Electrification Board · BUET Civil Engineering Graduate</p>
+      <p class="hero-bio">Dedicated engineering professional with expertise in infrastructure development, project management, technical leadership, and rural electrification initiatives that improve communities across Bangladesh.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+        <a href="#contact" class="btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Contact Me
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="mailto:shovon@example.com" class="social-link" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="ResearchGate">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a12.193 12.193 0 0 0-.32 2.93c-.023.912-.031 1.812-.031 2.696 0 .9.008 1.806.031 2.721a12.193 12.193 0 0 0 .32 2.93c.244.74.65 1.3 1.213 1.678.565.377 1.255.565 2.073.565.817 0 1.507-.19 2.072-.565.563-.378.97-.937 1.213-1.679a12.193 12.193 0 0 0 .32-2.93c.023-.914.031-1.82.031-2.72 0-.885-.008-1.785-.031-2.697a12.193 12.193 0 0 0-.32-2.93c-.244-.743-.65-1.303-1.213-1.68C21.093.19 20.403 0 19.586 0zm-15.19 0c-1.18 0-2.16.404-2.94 1.213C.675 2.02.284 3.034.284 4.245c0 1.21.39 2.213 1.172 3.008.78.796 1.762 1.195 2.94 1.195s2.16-.4 2.941-1.195c.782-.795 1.172-1.798 1.172-3.008 0-1.21-.39-2.224-1.172-3.032C6.557.403 5.575 0 4.397 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-label reveal">About</div>
+    <h2 class="section-title reveal">Professional Profile</h2>
+    <div class="section-divider reveal"></div>
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="about-bio">Shovon Mitra is a dedicated civil engineering professional currently serving as Deputy Director (Technical) at the Bangladesh Rural Electrification Board (BREB). With a strong foundation from Bangladesh University of Engineering and Technology (BUET), he brings technical depth, leadership, and a commitment to community development.</p>
+        <p class="about-bio">His career spans infrastructure planning, power distribution, project execution, quality assurance, and inter-agency coordination—contributing directly to rural electrification and development objectives aligned with national energy goals.</p>
+        <div class="about-philosophy">
+          <p>"Engineering sustainable solutions that improve communities and empower development."</p>
+        </div>
+      </div>
+      <div>
+        <div class="about-edu reveal">
+          <div class="edu-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="edu-detail">
+            <h4>B.Sc. in Civil Engineering</h4>
+            <p>Bangladesh University of Engineering and Technology (BUET)</p>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-item reveal">
+            <span class="stat-num" data-target="10">0</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-item reveal">
+            <span class="stat-num" data-target="25">0</span>
+            <span class="stat-label">Projects Led</span>
+          </div>
+          <div class="stat-item reveal">
+            <span class="stat-num" data-target="8">0</span>
+            <span class="stat-label">Districts Served</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label reveal">Career</div>
+    <h2 class="section-title reveal">Professional Experience</h2>
+    <div class="section-divider reveal"></div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Present</div>
+        <div class="timeline-role">Deputy Director (Technical)</div>
+        <div class="timeline-org">Bangladesh Rural Electrification Board (BREB)</div>
+        <p class="timeline-desc">Leading technical operations and infrastructure projects at BREB. Responsibilities include project supervision, engineering design review, quality assurance, team management, and coordination with government agencies to advance rural electrification across Bangladesh.</p>
+        <div class="timeline-tags">
+          <span class="tag">Technical Leadership</span>
+          <span class="tag">Infrastructure Planning</span>
+          <span class="tag">Rural Electrification</span>
+          <span class="tag">Project Supervision</span>
+          <span class="tag">Contract Management</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Previous</div>
+        <div class="timeline-role">Assistant Engineer</div>
+        <div class="timeline-org">Bangladesh Rural Electrification Board (BREB)</div>
+        <p class="timeline-desc">Managed technical design and field execution of electrification projects. Coordinated with contractors and government bodies to ensure project delivery within scope and regulatory frameworks.</p>
+        <div class="timeline-tags">
+          <span class="tag">Engineering Design</span>
+          <span class="tag">Field Execution</span>
+          <span class="tag">Procurement</span>
+          <span class="tag">Stakeholder Coordination</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Early Career</div>
+        <div class="timeline-role">Executive Engineer</div>
+        <div class="timeline-org">Public Works / Civil Infrastructure</div>
+        <p class="timeline-desc">Gained foundational expertise in structural assessment, civil infrastructure design, and quality control protocols across multiple public-sector engineering assignments.</p>
+        <div class="timeline-tags">
+          <span class="tag">Structural Assessment</span>
+          <span class="tag">Civil Design</span>
+          <span class="tag">Quality Control</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="container">
+    <div class="section-label reveal">Capabilities</div>
+    <h2 class="section-title reveal">Key Expertise</h2>
+    <div class="section-divider reveal"></div>
+    <div class="expertise-grid">
+      <div class="expertise-card" style="transition-delay:0s">
+        <div class="expertise-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M6 20V4l6-2 6 2v16"/><path d="M10 20v-5h4v5"/></svg>
+        </div>
+        <div class="expertise-title">Civil Engineering</div>
+        <div class="expertise-desc">Structural analysis, design review, and technical assessment of civil infrastructure.</div>
+      </div>
+      <div class="expertise-card" style="transition-delay:0.05s">
+        <div class="expertise-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="expertise-title">Project Management</div>
+        <div class="expertise-desc">End-to-end project planning, scheduling, risk management, and delivery oversight.</div>
+      </div>
+      <div class="expertise-card" style="transition-delay:0.1s">
+        <div class="expertise-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="expertise-title">Rural Electrification</div>
+        <div class="expertise-desc">Power distribution infrastructure planning and implementation for rural communities.</div>
+      </div>
+      <div class="expertise-card" style="transition-delay:0.15s">
+        <div class="expertise-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <div class="expertise-title">Technical Leadership</div>
+        <div class="expertise-desc">Cross-functional team leadership, mentoring, and inter-agency technical coordination.</div>
+      </div>
+      <div class="expertise-card" style="transition-delay:0.2s">
+        <div class="expertise-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="expertise-title">Infrastructure Development</div>
+        <div class="expertise-desc">Large-scale infrastructure planning aligned with national development frameworks.</div>
+      </div>
+      <div class="expertise-card" style="transition-delay:0.25s">
+        <div class="expertise-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="expertise-title">Contract Management</div>
+        <div class="expertise-desc">Procurement oversight, bid evaluation, and contract administration for public works.</div>
+      </div>
+      <div class="expertise-card" style="transition-delay:0.3s">
+        <div class="expertise-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="expertise-title">Quality Assurance</div>
+        <div class="expertise-desc">Compliance monitoring, inspection protocols, and engineering standards enforcement.</div>
+      </div>
+      <div class="expertise-card" style="transition-delay:0.35s">
+        <div class="expertise-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="expertise-title">Strategic Planning</div>
+        <div class="expertise-desc">Long-range infrastructure planning aligned with Bangladesh Vision 2041 energy goals.</div>
+      </div>
+      <div class="expertise-card" style="transition-delay:0.4s">
+        <div class="expertise-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+        </div>
+        <div class="expertise-title">Engineering Design Review</div>
+        <div class="expertise-desc">Critical review of structural and electrical design documents for safety and compliance.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label reveal">Proficiency</div>
+    <h2 class="section-title reveal">Skills Dashboard</h2>
+    <div class="section-divider reveal"></div>
+    <div class="skills-cols">
+      <div class="reveal">
+        <div class="skill-group-title">Technical Software</div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">AutoCAD</span><span class="skill-pct">90%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">ETABS</span><span class="skill-pct">82%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="82"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">STAAD Pro</span><span class="skill-pct">78%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="78"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">MS Project</span><span class="skill-pct">88%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="88"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">GIS / Mapping Tools</span><span class="skill-pct">72%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="72"></div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="skill-group-title">Management &amp; Leadership</div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">Team Leadership</span><span class="skill-pct">94%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="94"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">Strategic Planning</span><span class="skill-pct">87%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="87"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">Budget Management</span><span class="skill-pct">84%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="84"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">Procurement &amp; Contracts</span><span class="skill-pct">89%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="89"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">Stakeholder Communication</span><span class="skill-pct">92%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar" data-width="92"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label reveal">Portfolio</div>
+    <h2 class="section-title reveal">Projects &amp; Achievements</h2>
+    <div class="section-divider reveal"></div>
+    <div class="filter-row reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="electrification">Electrification</button>
+      <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+      <button class="filter-btn" data-filter="management">Management</button>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card" data-cat="electrification">
+        <div class="project-img" style="background: linear-gradient(135deg, #0F172A, #1E3A5F);">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Rural Electrification</div>
+          <div class="project-title">Last-Mile Connectivity Programme</div>
+          <p class="project-desc">Led technical planning and supervision for extending electricity to underserved rural communities, coordinating multi-district grid expansion across several upazillas.</p>
+          <div class="project-outcome">↗ Electrified 50,000+ households across target districts</div>
+        </div>
+      </div>
+      <div class="project-card" data-cat="infrastructure">
+        <div class="project-img" style="background: linear-gradient(135deg, #1E3A5F, #0F172A);">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.5"><path d="M2 20h20M6 20V4l6-2 6 2v16"/></svg>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Infrastructure</div>
+          <div class="project-title">Substation Civil Works Modernisation</div>
+          <p class="project-desc">Oversaw civil engineering design review and construction supervision for 33/11 kV substation upgrade projects, ensuring structural integrity and regulatory compliance.</p>
+          <div class="project-outcome">↗ Completed 12 substation upgrades on time and within budget</div>
+        </div>
+      </div>
+      <div class="project-card" data-cat="management">
+        <div class="project-img" style="background: linear-gradient(135deg, #0F172A, #2563EB22);">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Management</div>
+          <div class="project-title">ADB-Funded Distribution Network Project</div>
+          <p class="project-desc">Managed technical compliance and procurement for an ADB-funded distribution network rehabilitation project, coordinating with international consultants and government counterparts.</p>
+          <div class="project-outcome">↗ Successfully disbursed 98% of project funds within loan period</div>
+        </div>
+      </div>
+      <div class="project-card" data-cat="infrastructure">
+        <div class="project-img" style="background: linear-gradient(135deg, #1E3A5F 30%, #0F172A);">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Infrastructure</div>
+          <div class="project-title">Rural Road &amp; Drainage Rehabilitation</div>
+          <p class="project-desc">Technical review and implementation oversight for combined road and drainage infrastructure rehabilitation in semi-urban BREB service areas.</p>
+          <div class="project-outcome">↗ Improved access for maintenance crews and reduced flood losses</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-label reveal">Training &amp; Credentials</div>
+    <h2 class="section-title reveal">Certifications &amp; Training</h2>
+    <div class="section-divider reveal"></div>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🏅</div>
+        <div>
+          <div class="cert-name">Project Management for Development Professionals</div>
+          <div class="cert-org">GoB / World Bank Training Programme</div>
+          <div class="cert-date">Update with year</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">⚡</div>
+        <div>
+          <div class="cert-name">Power System Planning &amp; Operations</div>
+          <div class="cert-org">Bangladesh Power Development Board</div>
+          <div class="cert-date">Update with year</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🏗️</div>
+        <div>
+          <div class="cert-name">Advanced AutoCAD for Civil Engineers</div>
+          <div class="cert-org">BUET Continuing Education Centre</div>
+          <div class="cert-date">Update with year</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📋</div>
+        <div>
+          <div class="cert-name">Public Procurement Rules &amp; Practice</div>
+          <div class="cert-org">Central Procurement Technical Unit (CPTU)</div>
+          <div class="cert-date">Update with year</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🌐</div>
+        <div>
+          <div class="cert-name">Rural Electrification Leadership Forum</div>
+          <div class="cert-org">International Conference — Update Country</div>
+          <div class="cert-date">Update with year</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📊</div>
+        <div>
+          <div class="cert-name">Financial Management for Engineers</div>
+          <div class="cert-org">Ministry of Finance, Bangladesh</div>
+          <div class="cert-date">Update with year</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-block">
+        <span class="counter-num" data-target="10">0</span><span class="counter-suffix">+</span>
+        <p>Years of Experience</p>
+      </div>
+      <div class="stat-block">
+        <span class="counter-num" data-target="25">0</span><span class="counter-suffix">+</span>
+        <p>Projects Completed</p>
+      </div>
+      <div class="stat-block">
+        <span class="counter-num" data-target="50000">0</span><span class="counter-suffix">+</span>
+        <p>Households Electrified</p>
+      </div>
+      <div class="stat-block">
+        <span class="counter-num" data-target="15">0</span><span class="counter-suffix">+</span>
+        <p>Training Programmes</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label reveal">Get in Touch</div>
+    <h2 class="section-title reveal">Contact</h2>
+    <div class="section-divider reveal"></div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-info-card">
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-detail">
+              <h4>Email</h4>
+              <a href="mailto:shovon@example.com">shovon@example.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-detail">
+              <h4>Phone</h4>
+              <a href="tel:+880">+880 — Update number</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💼</div>
+            <div class="contact-detail">
+              <h4>LinkedIn</h4>
+              <a href="#" target="_blank">linkedin.com/in/shovonmitra</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🏢</div>
+            <div class="contact-detail">
+              <h4>Office</h4>
+              <p>Bangladesh Rural Electrification Board, Dhaka</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="form-group">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" placeholder="Your full name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subject</label>
+          <input type="text" class="form-control" placeholder="Subject of your message">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" placeholder="Write your message here..."></textarea>
+        </div>
+        <button class="form-btn">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <span>Shovon Mitra</span> · Deputy Director (Technical), Bangladesh Rural Electrification Board · Designed with precision</p>
+</footer>
+
+<!-- FLOATING ACTION BUTTON -->
+<div class="fab-wrap" id="fab">
+  <div class="fab-options">
+    <a href="mailto:shovon@example.com" class="fab-opt">
+      <span class="fab-opt-label">Email</span>
+      <div class="fab-opt-icon" style="background:#2563EB">✉️</div>
+    </a>
+    <a href="https://wa.me/" class="fab-opt" target="_blank">
+      <span class="fab-opt-label">WhatsApp</span>
+      <div class="fab-opt-icon" style="background:#25D366">💬</div>
+    </a>
+    <a href="#" class="fab-opt" target="_blank">
+      <span class="fab-opt-label">LinkedIn</span>
+      <div class="fab-opt-icon" style="background:#0A66C2">💼</div>
+    </a>
+  </div>
+  <button class="fab-main" id="fab-btn" aria-label="Contact options">✉️</button>
+</div>
+
+<script>
+// Scroll progress
+window.addEventListener('scroll', () => {
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  document.getElementById('scroll-bar').style.width = (window.scrollY / total * 100) + '%';
+});
+
+// Theme toggle
+const html = document.documentElement;
+let dark = false;
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  dark = !dark;
+  html.setAttribute('data-theme', dark ? 'dark' : 'light');
+  document.getElementById('sun-icon').classList.toggle('active', !dark);
+  document.getElementById('moon-icon').classList.toggle('active', dark);
+  localStorage.setItem('theme', dark ? 'dark' : 'light');
+});
+const saved = localStorage.getItem('theme');
+if (saved === 'dark') { dark = true; html.setAttribute('data-theme','dark'); document.getElementById('sun-icon').classList.remove('active'); document.getElementById('moon-icon').classList.add('active'); }
+
+// FAB
+document.getElementById('fab-btn').addEventListener('click', () => {
+  document.getElementById('fab').classList.toggle('open');
+});
+
+// Intersection Observer for reveals
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal, .timeline-item, .expertise-card, .project-card, .cert-card').forEach(el => observer.observe(el));
+
+// Skill bars
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.skill-bar').forEach(bar => {
+        bar.style.width = bar.dataset.width + '%';
+      });
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.skills-cols').forEach(el => skillObserver.observe(el));
+
+// Counters
+function animateCounter(el, target, duration) {
+  const start = performance.now();
+  const isLarge = target > 1000;
+  const update = (time) => {
+    const p = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    const val = Math.round(ease * target);
+    el.textContent = isLarge ? val.toLocaleString() : val;
+    if (p < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.counter-num').forEach(num => {
+        animateCounter(num, parseInt(num.dataset.target), 1800);
+      });
+      e.target.querySelectorAll('.stat-num').forEach(num => {
+        animateCounter(num, parseInt(num.dataset.target), 1500);
+      });
+      counterObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('#stats .container, .stat-row').forEach(el => counterObs.observe(el));
+
+// Project filters
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.project-card').forEach(card => {
+      const show = filter === 'all' || card.dataset.cat === filter;
+      card.style.display = show ? '' : 'none';
+    });
+  });
+});
+
+// Particles
+(function() {
+  const canvas = document.getElementById('particles-canvas');
+  const ctx = canvas.getContext('2d');
+  let w, h, particles = [];
+  function resize() { w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight; }
+  resize(); window.addEventListener('resize', resize);
+  class P {
+    constructor() { this.reset(); }
+    reset() {
+      this.x = Math.random() * w; this.y = Math.random() * h;
+      this.vx = (Math.random() - 0.5) * 0.4; this.vy = (Math.random() - 0.5) * 0.4;
+      this.r = Math.random() * 1.5 + 0.5; this.a = Math.random() * 0.5 + 0.1;
+    }
+    draw() {
+      ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(212,175,55,${this.a})`; ctx.fill();
+    }
+    move() {
+      this.x += this.vx; this.y += this.vy;
+      if (this.x < 0 || this.x > w || this.y < 0 || this.y > h) this.reset();
+    }
+  }
+  for (let i = 0; i < 80; i++) particles.push(new P());
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+    particles.forEach(p => { p.move(); p.draw(); });
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const d = Math.hypot(particles[i].x - particles[j].x, particles[i].y - particles[j].y);
+        if (d < 100) {
+          ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(37,99,235,${0.15 * (1 - d/100)})`; ctx.lineWidth = 0.5; ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
